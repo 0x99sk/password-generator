@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-5">Password Generator</h1>
+
+        <!-- Character Type Checkboxes -->
+        <div class="mb-4">
+            <h5>Character Types</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="uppercase" checked>
+                <label class="form-check-label" for="uppercase">Uppercase (<span class="text-danger">A-Z</span>)</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="lowercase" checked>
+                <label class="form-check-label" for="lowercase">Lowercase (<span class="text-danger">a-z</span>)</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="numbers" checked>
+                <label class="form-check-label" for="numbers">Numbers (<span class="text-danger">0-9</span>)</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="special" checked>
+                <label class="form-check-label" for="special">Symbols (<span class="text-danger"># $ % & ? @ ~</span>)</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="exclude">
+                <label class="form-check-label" for="exclude">Exclude (<span class="text-danger">i I l 1 o 0 O</span>)</label>
+            </div>
+        </div>
+
+        <!-- Password Length -->
+        <div class="mb-4">
+            <h5>Password Length</h5>
+            <div class="input-group w-50 w-md-25">
+                <input type="number" class="form-control" id="length" min="8" max="512" value="16">
+                <button class="btn btn-outline-secondary" type="button" id="length-decrease">-</button>
+                <button class="btn btn-outline-secondary" type="button" id="length-increase">+</button>
+            </div>
+        </div>
+
+        <!-- Password Quantity -->
+        <div class="mb-4">
+            <h5>Number of Passwords</h5>
+            <div class="input-group w-50 w-md-25">
+                <input type="number" class="form-control" id="quantity" min="1" max="999" value="1">
+                <button class="btn btn-outline-secondary" type="button" id="quantity-decrease">-</button>
+                <button class="btn btn-outline-secondary" type="button" id="quantity-increase">+</button>
+            </div>
+        </div>
+
+        <!-- Generate Button -->
+        <div class="mb-4">
+            <button class="btn btn-primary" id="generate">Generate Password</button>
+        </div>
+
+        <!-- Generated Passwords -->
+        <div class="mb-4 position-relative">
+            <h5>Generated Passwords</h5>
+            <textarea class="form-control" id="output" rows="5" readonly></textarea>
+            <!-- Custom Copy Notification -->
+            <div id="copy-notification" class="copy-notification" style="display: none;">Copied!</div>
+        </div>
+    </div>
+
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

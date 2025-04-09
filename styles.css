@@ -1,0 +1,39 @@
+/* Custom styles for the password generator */
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 800px;
+}
+
+#output {
+    resize: vertical;
+    cursor: pointer;
+    background-color: #e9ecef; /* Gray background for readonly textarea */
+}
+
+.copy-notification {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.25rem 0.5rem; /* Small padding to wrap content tightly */
+    width: auto; /* Adapt to content width */
+    display: inline-block; /* Ensure width fits content */
+    background-color: #28a74680; /* Green background */
+    color: white; /* White text */
+    border-radius: 0.25rem; /* Rounded corners */
+    z-index: 1000;
+}
+
+/* Increase spacing between title and first module */
+h1.mb-5 {
+    margin-bottom: 3rem !important; /* Doubles the default mb-5 spacing */
+}
+
+/* Increase spacing between modules */
+.mb-4 {
+    margin-bottom: 2rem !important; /* Doubles the default mb-4 spacing */
+}
